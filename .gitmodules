@@ -1,0 +1,6 @@
+[submodule "tt-custom-gds"]
+	path = tt-custom-gds
+	url = https://github.com/TinyTapeout/tt-custom-gds
+[submodule "skullfet"]
+	path = skullfet
+	url = git@github.com:wokwi/skullfet.git
