@@ -13,12 +13,14 @@ module tt_um_urish_skullfet (
 	input  wire       rst_n
 );
 
-  assign uo_out = { 6'b0, nand1_out, inv1_out };
+  assign uo_out = { 4'b0, ff_sr_q_bar, ff_sr_q, nand1_out, inv1_out };
   assign uio_out = '0;
   assign uio_oe = '0;
 
 	wire inv1_out;
 	wire nand1_out;
+	wire ff_sr_q;
+	wire ff_sr_q_bar;
 	
 	skullfet_inverter inv1(
 		.A(ui_in[0]),
@@ -29,6 +31,13 @@ module tt_um_urish_skullfet (
 		.A(ui_in[0]),
 		.B(ui_in[1]),
 		.Y(nand1_out)
+	);
+
+	skullfet_ff_sr ff1(
+		.set(ui_in[2]),
+		.reset(ui_in[3]),
+		.q(ff_sr_q),
+		.q_bar(ff_sr_q_bar)
 	);
 
 endmodule

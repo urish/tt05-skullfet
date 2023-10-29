@@ -1,6 +1,6 @@
 {
   "DESIGN_NAME": "tt_um_urish_skullfet",
-  "VERILOG_FILES": ["dir::src/top.v", "dir::src/skullfet.v"],
+  "VERILOG_FILES": ["dir::src/top.v", "dir::src/flipflop.v", "dir::src/skullfet.v"],
 
   "FP_SIZING": "absolute",
   "DIE_AREA": "0 0 157.32 111.52",
@@ -21,16 +21,15 @@
   "RT_MAX_LAYER": "met4",
 
   "//": "make the PDN denser",
-  "FP_PDN_VOFFSET": 5.355,
+  "FP_PDN_VOFFSET": 4,
   "FP_PDN_VPITCH": 10,
   "FP_PDN_HORIZONTAL_LAYER": "met3",
   "FP_PDN_VERTICAL_LAYER": "met4",
 
+  "FP_PDN_HORIZONTAL_HALO": 1,
+  "FP_PDN_VERTICAL_HALO": 1,
   "FP_TAP_HORIZONTAL_HALO": 1.6,
   "FP_TAP_VERTICAL_HALO": 0.4,
-
-  "//": "save some time",
-  "RUN_KLAYOUT_XOR": true,
 
   "//": "reduce wasted space",
   "TOP_MARGIN_MULT": 1,
@@ -44,7 +43,7 @@
     "skullfet_inverter": {
       "instances": {
         "inv1": {
-          "location": [22.25, 30],
+          "location": [20.9, 10],
           "orientation": "N"
         }
       },
@@ -55,7 +54,15 @@
     "skullfet_nand": {
       "instances": {
         "nand1": {
-          "location": [22.25, 50],
+          "location": [20.9, 30.6],
+          "orientation": "N"
+        },
+        "ff1.n1": {
+          "location": [60.9, 10],
+          "orientation": "N"
+        },
+        "ff1.n2": {
+          "location": [60.9, 30.6],
           "orientation": "N"
         }
       },
