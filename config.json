@@ -33,7 +33,7 @@
 
   "//": "reduce wasted space",
   "TOP_MARGIN_MULT": 1,
-  "BOTTOM_MARGIN_MULT": 1,
+  "BOTTOM_MARGIN_MULT": 8,
   "LEFT_MARGIN_MULT": 6,
   "RIGHT_MARGIN_MULT": 6,
 
@@ -43,7 +43,7 @@
     "skullfet_inverter": {
       "instances": {
         "inv1": {
-          "location": [20.9, 10],
+          "location": [20.9, 50],
           "orientation": "N"
         }
       },
@@ -54,20 +54,31 @@
     "skullfet_nand": {
       "instances": {
         "nand1": {
-          "location": [20.9, 30.6],
+          "location": [20.9, 80.6],
           "orientation": "N"
         },
         "ff1.n1": {
-          "location": [60.9, 10],
+          "location": [60.9, 50],
           "orientation": "N"
         },
         "ff1.n2": {
-          "location": [60.9, 30.6],
+          "location": [60.9, 80.6],
           "orientation": "N"
         }
       },
       "gds": ["dir::macros/skullfet_nand.gds"],
       "lef": ["dir::macros/skullfet_nand.lef"]
+    },
+
+    "skullfet_logo": {
+      "instances": {
+        "logo": {
+          "location": [39.41, 0],
+          "orientation": "S"
+        }
+      },
+      "gds": ["dir::macros/skullfet_logo.gds"],
+      "lef": ["dir::macros/skullfet_logo.lef"]
     }
   }
 }

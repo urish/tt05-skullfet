@@ -16,7 +16,7 @@
 
 SKULLFET_DIR = ../skullfet
 GDS_DIR = $(SKULLFET_DIR)/gds
-TARGETS = skullfet_inverter.gds skullfet_inverter.lef skullfet_nand.gds skullfet_nand.lef
+TARGETS = skullfet_inverter.gds skullfet_inverter.lef skullfet_nand.gds skullfet_nand.lef skullfet_logo.gds skullfet_logo.lef
 
 all: build_skullfet $(TARGETS)
 

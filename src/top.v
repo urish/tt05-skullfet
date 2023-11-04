@@ -40,4 +40,7 @@ module tt_um_urish_skullfet (
 		.q_bar(ff_sr_q_bar)
 	);
 
+	(* keep *)
+	skullfet_logo logo();
+
 endmodule
